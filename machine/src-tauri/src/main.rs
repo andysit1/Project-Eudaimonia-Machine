@@ -39,12 +39,27 @@ fn main() {
                 app,
                 "external", /* the unique window label */
                 tauri::WindowUrl::External("https://tauri.app/".parse().unwrap())
-            ).build()?;
+                )
+                .title("Example Window")
+                .fullscreen(true)
+                .always_on_top(true)
+                .resizable(false)
+                .closable(false)
+                .focus()
+                .tabbing_identifier("Main")
+                .build()?;
             let docs_window = tauri::WindowBuilder::new(
                 app,
                 "local", /* the unique window label */
                 tauri::WindowUrl::External("https://youtube.com/".parse().unwrap())
-              ).build()?;
+              )
+              .title("Example Window")
+              .resizable(false)
+              .closable(false)
+              .focus()
+              .fullscreen(true)
+              .tabbing_identifier("Main")
+              .build()?;
             Ok(())
         })
         .menu(menu)
