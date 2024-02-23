@@ -17,15 +17,6 @@
         "open": true
       }
     },
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "machine",
-        "width": 1000,
-        "height": 1000
-      }
-    ],
     "security": {
       "csp": null
     },
